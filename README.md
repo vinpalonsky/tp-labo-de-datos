@@ -41,3 +41,16 @@
 Estaría correcto eliminar las variables de keeper_?
 Reseteo el index antes o despues de borrar filas? Digo porque las filas se borran por indice
 Está bien esto de ir iterando para limpiar los datos? (por ej: borro las variables con menor del 60% de cobertura y el resto las manejo de manera más detallada)
+Me quedaron 45 variables numericas y 920 jugadores, esta bien?
+
+Hay que usar graficos para la limpieza de datos? (como plotbox)
+
+### Análisis exploratorio
+
+
+### PCA y Clustering
+
+Hay que hacerlo con el dataframe df_selecciones no?
+
+2. Cómo deberia interpretar a z1 y z2?
+5. No entiendo muy bien la consigna

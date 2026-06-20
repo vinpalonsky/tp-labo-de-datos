@@ -60,3 +60,13 @@ Hay que hacerlo con el dataframe df_selecciones no? (me quedaron 46 selecciones 
 Igualmente considero que las primeras dos componentes principales no resumen bien la info
 
 5. No entiendo muy bien la consigna. Sería describir qué explica cierto cluster segun los pesos de z1 y z2? Por ejemplo, en mi caso diría que los equipos naranjas son los de peor rendimiento
+
+### Regresión y clasificación
+
+2. "(excluir todas las variables de cantidad de partidos jugados y minutos jugados)" refiere a las que usamos para armar la nueva variable "partidos_liga" o a todas las que incluyan cualquier tipo de esa métrica (como "caps", "standard_playing_time_starts" o "shooting_90s")
+arme un modelo lineal multivariado y otro Ridge. El ridge funciono claramente mejor. Basta con esto?
+Puedo buscar el alpha optimo utilizando GridSearchCV o RidgeCV o tengo que hacerlo a mano? Igual me da mejor resultado probando a mano, tiene sentido esto?
+El grafico de los alpha no me esta dando bien, por qué es?
+Qué hago con todos los warnings de las filas mal condicionadas?
+
+1. El KNN a mano (es decir con leave_one_out) funciona mejor que KNeighborsClassifier, tiene sentido esto? Yo pense que quiza si porque para KNeighborsClassifier estamos separando en X_train y X_test y entonces el rendimiento solo se basa en un porcentaje de nuestros datos, no con todos como en leave_one_out

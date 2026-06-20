@@ -27,3 +27,17 @@
       1. pip install {dependencia}
    4. Actualizar requirements.txt:
       1. pip freeze > requirements.txt
+
+
+## Consultas
+
+### Limpieza y Procesamiento de Datos
+
+4. las reemplazaria por 0 porque significa que no hubo tiros
+
+5. se me ocurre que se podría reemplazar los valores por 0 excepto aquellos donde exista alguna variable similar en otro grupo (como partidos como titular o minutos jugados). Esto generaría correlación entre las variables?
+
+6. En los puntos 4 y 5 se me pregunta cómo resolvería sin eliminar columnas, pero en este punto me dicen que deben quedar aprox 850 jugadores y 30 variables numericas. Entonces, los puntos anteriores son solo teóricos? En esta parte limpio a criterio propio?
+Estaría correcto eliminar las variables de keeper_?
+Reseteo el index antes o despues de borrar filas? Digo porque las filas se borran por indice
+Está bien esto de ir iterando para limpiar los datos? (por ej: borro las variables con menor del 60% de cobertura y el resto las manejo de manera más detallada)

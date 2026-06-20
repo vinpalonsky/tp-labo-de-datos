@@ -50,7 +50,13 @@ Hay que usar graficos para la limpieza de datos? (como plotbox)
 
 ### PCA y Clustering
 
-Hay que hacerlo con el dataframe df_selecciones no?
+Hay que hacerlo con el dataframe df_selecciones no? (me quedaron 46 selecciones y 43 variables numericas, esta ok?)
 
 2. Cómo deberia interpretar a z1 y z2?
-5. No entiendo muy bien la consigna
+
+3. Para kmeans vimos algun método de elección del hiperparámetro K?
+
+4. Está bien el análisis del gráfico y los clusters?
+Igualmente considero que las primeras dos componentes principales no resumen bien la info
+
+5. No entiendo muy bien la consigna. Sería describir qué explica cierto cluster segun los pesos de z1 y z2? Por ejemplo, en mi caso diría que los equipos naranjas son los de peor rendimiento

@@ -31,6 +31,8 @@
 
 ## Consultas
 
+Esta bien el nombre del notebook
+
 ### Limpieza y Procesamiento de Datos
 
 4. las reemplazaria por 0 porque significa que no hubo tiros

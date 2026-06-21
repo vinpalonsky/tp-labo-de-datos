@@ -63,10 +63,17 @@ Igualmente considero que las primeras dos componentes principales no resumen bie
 
 ### Regresión y clasificación
 
-2. "(excluir todas las variables de cantidad de partidos jugados y minutos jugados)" refiere a las que usamos para armar la nueva variable "partidos_liga" o a todas las que incluyan cualquier tipo de esa métrica (como "caps", "standard_playing_time_starts" o "shooting_90s")
+1. No esta clara la consigna. Este df_jugadores_regresion lo tengo que usar par 2. y 3.? O para que lo estamos armando?
+De que me sirve estimar el total de partidos de la liga con el maximo de partidos jugados por los jugadores de cada confederacion?
+
+2. "(excluir todas las variables de cantidad de partidos jugados y minutos jugados)" refiere a las que usamos para armar la nueva variable "partidos_liga" o a todas las que incluyan cualquier tipo de esa métrica (como "caps", "standard_playing_time_starts" o "shooting_90s"). Cuando saco mas variables funciona mucho peor el modelo (lo cual tiene sentido), es esa la idea?
 arme un modelo lineal multivariado y otro Ridge. El ridge funciono claramente mejor. Basta con esto?
 Puedo buscar el alpha optimo utilizando GridSearchCV o RidgeCV o tengo que hacerlo a mano? Igual me da mejor resultado probando a mano, tiene sentido esto?
 El grafico de los alpha no me esta dando bien, por qué es?
-Qué hago con todos los warnings de las filas mal condicionadas?
+Qué hago con todos los warnings de las filas mal condicionadas? Si hago un escalamiento previo de los datos se arregla, pero me empeoran los resultados
 
-1. El KNN a mano (es decir con leave_one_out) funciona mejor que KNeighborsClassifier, tiene sentido esto? Yo pense que quiza si porque para KNeighborsClassifier estamos separando en X_train y X_test y entonces el rendimiento solo se basa en un porcentaje de nuestros datos, no con todos como en leave_one_out
+3. El KNN a mano (es decir con leave_one_out) funciona mejor que KNeighborsClassifier, tiene sentido esto? Yo pense que quiza si porque para KNeighborsClassifier estamos separando en X_train y X_test y entonces el rendimiento solo se basa en un porcentaje de nuestros datos, no con todos como en leave_one_out
+
+### El 11 ideal de Argentina y Brasil
+
+No le veo mucho sentido a clasificar las posiciones con los datos que entrenamos al mismo clasificador, porque es la misma informacion. Estaraia bien hacer, una vez encontrado el mejor K, una especie de leave_one_out pero para clasificar las nuevas posiciones en vez de testear el modelo.

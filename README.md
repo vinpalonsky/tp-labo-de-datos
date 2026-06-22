@@ -49,6 +49,9 @@ Hay que usar graficos para la limpieza de datos? (como plotbox)
 
 ### Análisis exploratorio
 
+Las selecciones no son necesariamente eficaces por sus modos de juegos, simplemente tienen un estilo y ya
+
+CAF y AFC mucho mas defensivo que ataque diria, la mayora estan sobre el 0 de ataque pero positivo en defensa
 
 ### PCA y Clustering
 
@@ -56,7 +59,7 @@ Hay que hacerlo con el dataframe df_selecciones no? (me quedaron 46 selecciones 
 
 2. Cómo deberia interpretar a z1 y z2?
 
-3. Para kmeans vimos algun método de elección del hiperparámetro K?
+3. Para kmeans vimos algun método de elección del hiperparámetro K? Tengo que justificar por que elegimos kmeans?
 
 4. Está bien el análisis del gráfico y los clusters?
 Igualmente considero que las primeras dos componentes principales no resumen bien la info
@@ -70,12 +73,17 @@ De que me sirve estimar el total de partidos de la liga con el maximo de partido
 
 2. "(excluir todas las variables de cantidad de partidos jugados y minutos jugados)" refiere a las que usamos para armar la nueva variable "partidos_liga" o a todas las que incluyan cualquier tipo de esa métrica (como "caps", "standard_playing_time_starts" o "shooting_90s"). Cuando saco mas variables funciona mucho peor el modelo (lo cual tiene sentido), es esa la idea?
 arme un modelo lineal multivariado y otro Ridge. El ridge funciono claramente mejor. Basta con esto?
-Puedo buscar el alpha optimo utilizando GridSearchCV o RidgeCV o tengo que hacerlo a mano? Igual me da mejor resultado probando a mano, tiene sentido esto?
+Puedo buscar el alpha optimo utilizando GridSearchCV/RidgeCV o tengo que hacerlo a mano? Igual me da mejor resultado probando a mano, tiene sentido esto?
 El grafico de los alpha no me esta dando bien, por qué es?
 Qué hago con todos los warnings de las filas mal condicionadas? Si hago un escalamiento previo de los datos se arregla, pero me empeoran los resultados
 
 3. El KNN a mano (es decir con leave_one_out) funciona mejor que KNeighborsClassifier, tiene sentido esto? Yo pense que quiza si porque para KNeighborsClassifier estamos separando en X_train y X_test y entonces el rendimiento solo se basa en un porcentaje de nuestros datos, no con todos como en leave_one_out
+Puede que sea porque uno utiliza NearestNeighbors y el otro KNeighborsClassifier?
+Usando posiciones_tm funciona todo mucho peor, eso lo incluimos o nos quedamos directo con posicion?
 
 ### El 11 ideal de Argentina y Brasil
 
-No le veo mucho sentido a clasificar las posiciones con los datos que entrenamos al mismo clasificador, porque es la misma informacion. Estaraia bien hacer, una vez encontrado el mejor K, una especie de leave_one_out pero para clasificar las nuevas posiciones en vez de testear el modelo.
+No le veo mucho sentido a predecir las posiciones con los datos que entrenamos al mismo clasificador, ya que es la misma informacion. Estaraia bien hacer, una vez encontrado el mejor K, una especie de leave_one_out pero para clasificar las nuevas posiciones en vez de testear el modelo?
+
+La verdad no predijo muy bien la seleccion titular jajajaj era esperado esto?
+Viendo los RECM y accuracy tiene sentido, pues ninguo superaba el 0.7

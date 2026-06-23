@@ -35,29 +35,25 @@ Esta bien el nombre del notebook
 
 ### Limpieza y Procesamiento de Datos
 
-4. las reemplazaria por 0 porque significa que no hubo tiros
+2. El rango etario se agrega al df original?
 
 5. se me ocurre que se podría reemplazar los valores por 0 excepto aquellos donde exista alguna variable similar en otro grupo (como partidos como titular o minutos jugados). Esto generaría correlación entre las variables?
 
-6. En los puntos 4 y 5 se me pregunta cómo resolvería sin eliminar columnas, pero en este punto me dicen que deben quedar aprox 850 jugadores y 30 variables numericas. Entonces, los puntos anteriores son solo teóricos? En esta parte limpio a criterio propio?
-Estaría correcto eliminar las variables de keeper_?
-Reseteo el index antes o despues de borrar filas? Digo porque las filas se borran por indice
-Está bien esto de ir iterando para limpiar los datos? (por ej: borro las variables con menor del 60% de cobertura y el resto las manejo de manera más detallada)
-Me quedaron 45 variables numericas y 920 jugadores, esta bien?
+6. Reseteo el index antes o despues de borrar filas? Digo porque las filas se borran por indice
+No tengo jugadores con todas las variables en NA, debería tener?
 
-Hay que usar graficos para la limpieza de datos? (como plotbox)
+7. hacer el promedio de keeper_ diviendo por cant de arqueros
+
+Repasar lipmieza y preguntar si el proceso es correcto
 
 ### Análisis exploratorio
 
 Las selecciones no son necesariamente eficaces por sus modos de juegos, simplemente tienen un estilo y ya
-
-CAF y AFC mucho mas defensivo que ataque diria, la mayora estan sobre el 0 de ataque pero positivo en defensa
+Revisar de vuelta las conclusiones
 
 ### PCA y Clustering
 
-Hay que hacerlo con el dataframe df_selecciones no? (me quedaron 46 selecciones y 43 variables numericas, esta ok?)
-
-2. Cómo deberia interpretar a z1 y z2?
+2. Intente hacer el promedio de los arqueros aparte pero z2 igual le da peso a si es arquero o no. Tal vez porque varias selecciones no tienen arquero directamente.
 
 3. Para kmeans vimos algun método de elección del hiperparámetro K? Tengo que justificar por que elegimos kmeans?
 

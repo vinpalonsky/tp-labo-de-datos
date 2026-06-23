@@ -53,33 +53,15 @@ Revisar de vuelta las conclusiones
 
 ### PCA y Clustering
 
-2. Intente hacer el promedio de los arqueros aparte pero z2 igual le da peso a si es arquero o no. Tal vez porque varias selecciones no tienen arquero directamente.
+1. Escale con minmax en vez de standardscaler para que quede todo positivo y poder interpretar mejor z1 y z2. Está bien?
 
-3. Para kmeans vimos algun método de elección del hiperparámetro K? Tengo que justificar por que elegimos kmeans?
+2. Intente hacer el promedio de los arqueros aparte pero tanto z1 como z2 igual le dan peso a las variables de arquero. Está tomando si son eficientes o por cantidad?
 
-4. Está bien el análisis del gráfico y los clusters?
-Igualmente considero que las primeras dos componentes principales no resumen bien la info
-
-5. No entiendo muy bien la consigna. Sería describir qué explica cierto cluster segun los pesos de z1 y z2? Por ejemplo, en mi caso diría que los equipos naranjas son los de peor rendimiento
+4/5. cómo los puedo leer ahora que estan las variables de keeper?
+Me está dando 0.89 de varianza acumulada ahora, es por minmax?
 
 ### Regresión y clasificación
 
-1. No esta clara la consigna. Este df_jugadores_regresion lo tengo que usar par 2. y 3.? O para que lo estamos armando?
-De que me sirve estimar el total de partidos de la liga con el maximo de partidos jugados por los jugadores de cada confederacion?
-
-2. "(excluir todas las variables de cantidad de partidos jugados y minutos jugados)" refiere a las que usamos para armar la nueva variable "partidos_liga" o a todas las que incluyan cualquier tipo de esa métrica (como "caps", "standard_playing_time_starts" o "shooting_90s"). Cuando saco mas variables funciona mucho peor el modelo (lo cual tiene sentido), es esa la idea?
-arme un modelo lineal multivariado y otro Ridge. El ridge funciono claramente mejor. Basta con esto?
-Puedo buscar el alpha optimo utilizando GridSearchCV/RidgeCV o tengo que hacerlo a mano? Igual me da mejor resultado probando a mano, tiene sentido esto?
-El grafico de los alpha no me esta dando bien, por qué es?
-Qué hago con todos los warnings de las filas mal condicionadas? Si hago un escalamiento previo de los datos se arregla, pero me empeoran los resultados
-
-3. El KNN a mano (es decir con leave_one_out) funciona mejor que KNeighborsClassifier, tiene sentido esto? Yo pense que quiza si porque para KNeighborsClassifier estamos separando en X_train y X_test y entonces el rendimiento solo se basa en un porcentaje de nuestros datos, no con todos como en leave_one_out
-Puede que sea porque uno utiliza NearestNeighbors y el otro KNeighborsClassifier?
-Usando posiciones_tm funciona todo mucho peor, eso lo incluimos o nos quedamos directo con posicion?
 
 ### El 11 ideal de Argentina y Brasil
 
-No le veo mucho sentido a predecir las posiciones con los datos que entrenamos al mismo clasificador, ya que es la misma informacion. Estaraia bien hacer, una vez encontrado el mejor K, una especie de leave_one_out pero para clasificar las nuevas posiciones en vez de testear el modelo?
-
-La verdad no predijo muy bien la seleccion titular jajajaj era esperado esto?
-Viendo los RECM y accuracy tiene sentido, pues ninguo superaba el 0.7

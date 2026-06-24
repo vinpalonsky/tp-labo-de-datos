@@ -33,6 +33,8 @@
 
 Esta bien el nombre del notebook
 
+Probar con minmax scaler. O con los datos centrados.
+
 ### Limpieza y Procesamiento de Datos
 
 2. El rango etario se agrega al df original?
@@ -40,7 +42,7 @@ Esta bien el nombre del notebook
 5. se me ocurre que se podría reemplazar los valores por 0 excepto aquellos donde exista alguna variable similar en otro grupo (como partidos como titular o minutos jugados). Esto generaría correlación entre las variables?
 
 6. Reseteo el index antes o despues de borrar filas? Digo porque las filas se borran por indice
-No tengo jugadores con todas las variables en NA, debería tener?
+No puedo reemplazar los NA en misc_ y standard_ por 0 en vez de eliminar filas? No le veo mucho sentido a borrar filas
 
 7. hacer el promedio de keeper_ diviendo por cant de arqueros
 
@@ -57,11 +59,16 @@ Revisar de vuelta las conclusiones
 
 2. Intente hacer el promedio de los arqueros aparte pero tanto z1 como z2 igual le dan peso a las variables de arquero. Está tomando si son eficientes o por cantidad?
 
+3. Deberia usar standardscaler en vez de minmax?
+hace falta el +1 en NearestNeighbors? esta bien el codigo y los indices?
+
 4/5. cómo los puedo leer ahora que estan las variables de keeper?
 Me está dando 0.89 de varianza acumulada ahora, es por minmax?
 
 ### Regresión y clasificación
 
+2. es multivariado el modelo lineal no? que diferencia tiene polinomial de multivariado?
+cambia si escalamos con standardscaler o minmax? hay alguno correcto?
 
 ### El 11 ideal de Argentina y Brasil
 

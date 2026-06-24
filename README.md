@@ -69,6 +69,8 @@ Me está dando 0.89 de varianza acumulada ahora, es por minmax?
 
 2. es multivariado el modelo lineal no? que diferencia tiene polinomial de multivariado?
 cambia si escalamos con standardscaler o minmax? hay alguno correcto?
+para el modelo multivariado no tiene sentido hacer validacion cruzada no?
 
 ### El 11 ideal de Argentina y Brasil
 
+me quedaron solo dos mediocampistas para brasil en el once ideal, como hago?

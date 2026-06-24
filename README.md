@@ -43,8 +43,9 @@ Probar con minmax scaler. O con los datos centrados.
 
 6. Reseteo el index antes o despues de borrar filas? Digo porque las filas se borran por indice
 No puedo reemplazar los NA en misc_ y standard_ por 0 en vez de eliminar filas? No le veo mucho sentido a borrar filas
+con la segunda opcion de dataframe me da raro los alfa de ridge, por que?
 
-7. hacer el promedio de keeper_ diviendo por cant de arqueros
+1. esta bien el promedio de keeper_?
 
 Repasar lipmieza y preguntar si el proceso es correcto
 
@@ -69,6 +70,8 @@ Me está dando 0.89 de varianza acumulada ahora, es por minmax?
 
 2. es multivariado el modelo lineal no? que diferencia tiene polinomial de multivariado?
 cambia si escalamos con standardscaler o minmax? hay alguno correcto?
+para ridge hay que escalar no? esta bien si escalo todo el X?
+con la segunda opcion de dataframe me da raro los alfa de ridge, por que?
 para el modelo multivariado no tiene sentido hacer validacion cruzada no?
 
 ### El 11 ideal de Argentina y Brasil
